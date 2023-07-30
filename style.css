@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #aeaeae;
+}
+
+header {
+  height: 2rem;
+  max-width: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #404040;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 100vh;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 4rem;
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  max-height: 256px;
+  max-width: 256px;
+  width: 100%;
+  margin-top: 1rem;
+  border: #292929 solid 2px;
+}
+
+form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+textarea {
+  border: #292929 solid 2px;
+  font-size: 1.5rem;
+  max-width: 256px;
+  width: 256px;
+  height: 5rem;
+  background-color: #e0e0e0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+button {
+  margin-top: 2rem;
+  height: 3rem;
+  border-radius: 6px;
+  background-color: #292929;
+  color: #ffffff;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.loading {
+  display: inline-block;
+  animation: spin 2s linear infinite;
+  width: 14px;
+  height: 14px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
