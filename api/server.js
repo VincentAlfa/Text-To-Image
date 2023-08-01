@@ -24,11 +24,9 @@ app.post('/image', async (req, res) => {
     size: '512x512',
   });
   const image = aiResponse.data.data[0].url;
-  console.log(image);
   res.send({ image });
 });
 
-
 app.listen(port, () => {
   console.log(`listening on http://localhost:${port}`);
-})
+});
