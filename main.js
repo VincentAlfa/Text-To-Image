@@ -22,6 +22,7 @@ form.addEventListener('submit', async (e) => {
     result.innerHTML = `<img src="${image}" width="256">`;
     hideLoading();
   } catch (err) {
+    console.log(err)
     alert(err.message);
   }
 });
