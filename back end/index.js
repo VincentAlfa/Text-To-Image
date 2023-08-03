@@ -17,12 +17,12 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('hello world');
-})
+});
 
 app.post('/image', async (req, res) => {
-  try{
+  try {
     const prompt = req.body.prompt;
-  
+
     const aiResponse = await openai.createImage({
       prompt: prompt,
       n: 1,
@@ -30,8 +30,8 @@ app.post('/image', async (req, res) => {
     });
     const image = aiResponse.data.data[0].url;
     res.send({ image });
-  }catch(error){
-    res.end('something went wrong')
+  } catch (error) {
+    res.send('something went wrong');
   }
 });
 
