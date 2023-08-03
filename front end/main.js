@@ -7,7 +7,7 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
     showLoading();
     const data = new FormData(form);
-    const response = await fetch('https://text-to-image-dev8xvgu3-vincentalfa.vercel.app/image', {
+    const response = await fetch('https://text-to-image-chi.vercel.app/image', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/JSON',
