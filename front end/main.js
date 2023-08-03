@@ -22,15 +22,17 @@ form.addEventListener('submit', async (e) => {
     result.innerHTML = `<img src="${image}" width="256">`;
     hideLoading();
   } catch (err) {
-    console.log(err)
+    console.log(err);
     alert(err.message);
+    window.location.reload();
   }
 });
 
 function showLoading() {
   const button = document.querySelector('button');
   button.disabled = true;
-  button.innerHTML = 'Loading... <span><img class="loading" src="/loading.png" alt="loading"></span>';
+  button.innerHTML =
+    'Loading... <span><img class="loading" src="/loading.png" alt="loading"></span>';
 }
 
 function hideLoading() {
