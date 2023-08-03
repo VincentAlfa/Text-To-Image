@@ -20,15 +20,19 @@ app.get('/', (req, res) => {
 })
 
 app.post('/image', async (req, res) => {
-  const prompt = req.body.prompt;
-
-  const aiResponse = await openai.createImage({
-    prompt: prompt,
-    n: 1,
-    size: '512x512',
-  });
-  const image = aiResponse.data.data[0].url;
-  res.send({ image });
+  try{
+    const prompt = req.body.prompt;
+  
+    const aiResponse = await openai.createImage({
+      prompt: prompt,
+      n: 1,
+      size: '512x512',
+    });
+    const image = aiResponse.data.data[0].url;
+    res.send({ image });
+  }catch(error){
+    res.end('something went wrong')
+  }
 });
 
 app.listen(port, () => {
