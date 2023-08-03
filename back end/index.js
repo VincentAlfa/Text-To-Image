@@ -15,6 +15,10 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('hello world');
+})
+
 app.post('/image', async (req, res) => {
   const prompt = req.body.prompt;
 
